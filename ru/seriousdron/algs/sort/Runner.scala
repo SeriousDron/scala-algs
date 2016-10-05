@@ -10,7 +10,7 @@ object Runner extends App {
     array(i) = scala.io.StdIn.readLine().toInt
   }
 
-  InsertionSort.sort(array, Ordering[Int])
+  QuickSort.sort(array, Ordering[Int])
 
   //Output
   for (i <- array.indices) {
