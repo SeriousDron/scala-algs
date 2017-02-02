@@ -2,11 +2,6 @@ package ru.seriousdron.algs.sort
 
 object InsertionSort extends Sort with PartialSort {
 
-  override def sort[T](array: Array[T])(implicit ordering: Ordering[T]): Unit = {
-    //Sorting
-    this.partialSort(array, 0, array.length - 1)
-  }
-
   override def partialSort[T](array: Array[T], left: Int, right: Int)(implicit ordering: Ordering[T]): Unit = {
     for (i <- left to right) {
       val temp: T = array(i)
