@@ -2,7 +2,7 @@ package ru.seriousdron.algs.sort
 
 object InsertionSort extends Sort {
 
-  override def sort[T](array: Array[T], ordering: Ordering[T]): Unit = {
+  override def sort[T](array: Array[T])(implicit ordering: Ordering[T]): Unit = {
     //Sorting
     for (i <- 1 until array.length) {
       val temp: T = array(i)

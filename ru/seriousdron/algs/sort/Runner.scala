@@ -12,7 +12,7 @@ object Runner extends App {
     array(i) = scala.io.StdIn.readLine().toInt
   }
 
-  sortAlg.sort(array, Ordering[Int])
+  sortAlg.sort(array)
 
   //Output
   for (i <- array.indices) {

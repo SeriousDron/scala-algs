@@ -8,7 +8,7 @@ object QuickSort extends Sort{
     array(j) = temp
   }
 
-  override def sort[T](array: Array[T], ordering: Ordering[T]): Unit = {
+  override def sort[T](array: Array[T])(implicit ordering: Ordering[T]): Unit = {
 
     def partition(left: Int, right: Int): Int = {
       var i: Int = left
