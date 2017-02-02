@@ -21,7 +21,7 @@ object Runner extends App {
   println
 
   def selectSort: Sort = {
-    val sortObjects: Array[Sort] = Array(InsertionSort, new QuickSort(InsertionSort))
+    val sortObjects: Array[Sort] = Array(InsertionSort, new QuickSort())
     while(true) {
       //print sort types
       println("Select sort type")

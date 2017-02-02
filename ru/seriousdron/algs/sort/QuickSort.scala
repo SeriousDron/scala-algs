@@ -1,6 +1,6 @@
 package ru.seriousdron.algs.sort
 
-class QuickSort(s : PartialSort, threshold: Int = 3) extends Sort {
+class QuickSort(val threshold: Int = 3)(implicit partialSort: PartialSort) extends Sort {
 
   def swap[T](array: Array[T], i: Int, j: Int): Unit = {
     val temp:T = array(i)
@@ -36,7 +36,7 @@ class QuickSort(s : PartialSort, threshold: Int = 3) extends Sort {
     def sortPart(left: Int, right:Int): Unit = {
 
       if ((right - left) < threshold) {
-        s.partialSort(array, left, right)
+        partialSort.partialSort(array, left, right)
         return
       }
 
